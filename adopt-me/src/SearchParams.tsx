@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Pet from "./Pet";
+import { useBreedList } from "./useBreedList";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 export type PetData = {
   name: string;
@@ -13,7 +14,7 @@ const SearchParams = () => {
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
   const [pets, setPets] = useState([]);
-  const breeds: Array<string> = ["poodle"];
+  const [breeds] = useBreedList(animal);
   useEffect(() => {
     requestPets();
   }, []);
