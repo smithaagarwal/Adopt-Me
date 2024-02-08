@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import SearchParams from "./SearchParams";
+import "./App.css";
 
 function App() {
   return (
-    <>
-      <h1>Adopt Me</h1>
-    </>
-  )
+    <div>
+      <h1>Adopt Me!</h1>
+      <SearchParams />
+    </div>
+  );
 }
 
-export default App
+export default App;
